@@ -1,0 +1,107 @@
+.main {
+    padding-top: var(--space-6);
+}
+
+.top {
+    padding: 0 var(--space-3) var(--space-2);
+}
+
+@media (min-width: 768px) {
+    .top {
+        padding: 0 var(--space-5) var(--space-2);
+    }
+}
+
+.back {
+    font-size: var(--type-body-sm);
+    color: var(--noir-stone);
+}
+
+.back:hover {
+    color: var(--noir-ecru);
+}
+
+.header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0 var(--space-3) var(--space-3);
+}
+
+@media (min-width: 768px) {
+    .header {
+        padding: 0 var(--space-5) var(--space-3);
+    }
+}
+
+.title {
+    font-size: var(--type-display-lg);
+}
+
+.count {
+    font-size: var(--type-body-sm);
+    color: var(--noir-stone);
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3) var(--space-4);
+    border-top: 1px solid var(--noir-line-on-dark);
+    border-bottom: 1px solid var(--noir-line-on-dark);
+    margin: 0 var(--space-3) var(--space-4);
+}
+
+@media (min-width: 768px) {
+    .controls {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 var(--space-5) var(--space-4);
+    }
+}
+
+.categories,
+.sorts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.filterLink,
+.sortLink {
+    font-size: var(--type-body-sm);
+    color: var(--noir-stone);
+    padding-block: var(--space-1);
+}
+
+.filterLink:hover,
+.sortLink:hover {
+    color: var(--noir-ecru-dim);
+}
+
+.filterActive,
+.sortActive {
+    color: var(--noir-ecru);
+    border-bottom: 1px solid var(--noir-ecru);
+}
+
+.empty {
+    padding: var(--space-5) var(--space-3);
+    color: var(--noir-stone);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3) var(--space-2);
+    padding: 0 var(--space-3) var(--space-6);
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-4) var(--space-3);
+        padding: 0 var(--space-5) var(--space-7);
+    }
+}

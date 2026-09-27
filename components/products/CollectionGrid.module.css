@@ -22,9 +22,17 @@
   font-size: var(--type-display-md);
 }
 
-.count {
+.viewAll {
   font-size: var(--type-body-sm);
   color: var(--noir-stone);
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s var(--ease-editorial), border-color 0.3s var(--ease-editorial);
+}
+
+.viewAll:hover,
+.viewAll:focus-visible {
+  color: var(--noir-ecru);
+  border-color: var(--noir-ecru);
 }
 
 .grid {

@@ -12,9 +12,9 @@ export function Footer() {
         <div>
           <p className={styles.heading}>Shop</p>
           <ul>
-            <li><a href="#shop">New arrivals</a></li>
-            <li><a href="#shop">Jackets</a></li>
-            <li><a href="#shop">Accessories</a></li>
+            <li><a href="/shop?new=true">New arrivals</a></li>
+            <li><a href="/shop?category=jackets">Jackets</a></li>
+            <li><a href="/shop?category=accessories">Accessories</a></li>
           </ul>
         </div>
         <div>

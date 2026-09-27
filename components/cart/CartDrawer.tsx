@@ -228,13 +228,16 @@ export function CartDrawer({ open, onClose }: CartDrawerProps) {
             <span>${subtotal}</span>
           </div>
 
-          <button
-            type="button"
-            className={styles.checkout}
-            disabled={lines.length === 0}
+          <a
+            href="/checkout"
+            className={`${styles.checkout} ${lines.length === 0 ? styles.checkoutDisabled : ""}`}
+            aria-disabled={lines.length === 0}
+            onClick={(e) => {
+              if (lines.length === 0) e.preventDefault();
+            }}
           >
             Checkout
-          </button>
+          </a>
         </footer>
       </aside>
     </>

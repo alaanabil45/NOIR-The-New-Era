@@ -12,7 +12,7 @@ interface NavigationOverlayProps {
 const LINKS = [
   { label: "Issue 001", href: "/#cover" },
   { label: "Collection", href: "/#collection" },
-  { label: "Shop", href: "/#shop" },
+  { label: "Shop", href: "/shop" },
   { label: "About", href: "/about" },
 ];
 

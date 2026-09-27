@@ -1,0 +1,224 @@
+.main {
+    padding-top: var(--space-6);
+    min-height: 100vh;
+}
+
+.top {
+    padding: 0 var(--space-3) var(--space-3);
+}
+
+@media (min-width: 768px) {
+    .top {
+        padding: 0 var(--space-5) var(--space-3);
+    }
+}
+
+.back {
+    font-size: var(--type-body-sm);
+    color: var(--noir-stone);
+}
+
+.back:hover {
+    color: var(--noir-ecru);
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+    padding: 0 var(--space-3) var(--space-7);
+}
+
+@media (min-width: 900px) {
+    .layout {
+        grid-template-columns: 1.2fr 1fr;
+        padding: 0 var(--space-5) var(--space-7);
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.formSection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.sectionTitle {
+    font-size: var(--type-label);
+    letter-spacing: 0.03em;
+    color: var(--noir-stone);
+    margin-bottom: 4px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-1);
+}
+
+.input {
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--noir-line-on-dark);
+    color: var(--noir-ecru);
+    padding: 12px 14px;
+    font-size: var(--type-body-md);
+    font-family: var(--font-body);
+}
+
+.input::placeholder {
+    color: var(--noir-stone);
+}
+
+.input:focus-visible {
+    outline: 1px solid var(--noir-ecru);
+    outline-offset: 2px;
+}
+
+.paymentNote {
+    font-size: var(--type-body-sm);
+    color: var(--noir-stone);
+    margin-top: 4px;
+}
+
+.submit {
+    background: var(--noir-ecru);
+    color: var(--noir-black);
+    padding: var(--space-2);
+    font-size: var(--type-body-md);
+    letter-spacing: 0.02em;
+    margin-top: var(--space-2);
+    transition: opacity 0.2s var(--ease-editorial);
+}
+
+.submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.summary {
+    background: var(--noir-black-soft);
+    padding: var(--space-3);
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.lines {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.line {
+    display: grid;
+    grid-template-columns: 56px 1fr auto;
+    gap: var(--space-2);
+    align-items: center;
+    font-size: var(--type-body-sm);
+}
+
+.thumb {
+    position: relative;
+    width: 56px;
+    aspect-ratio: 4 / 5;
+    background: var(--noir-charcoal);
+}
+
+.thumbImage {
+    object-fit: cover;
+}
+
+.qtyBadge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: var(--noir-ecru);
+    color: var(--noir-black);
+    font-size: 11px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lineInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.lineMeta {
+    color: var(--noir-stone);
+    font-size: var(--type-label);
+}
+
+.totals {
+    border-top: 1px solid var(--noir-line-on-dark);
+    padding-top: var(--space-2);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.totalRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--type-body-sm);
+    color: var(--noir-ecru-dim);
+}
+
+.grandTotal {
+    color: var(--noir-ecru);
+    font-size: var(--type-body-lg);
+    margin-top: 4px;
+}
+
+.confirmation,
+.empty {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--space-2);
+    padding: var(--space-3);
+    max-width: 48ch;
+}
+
+@media (min-width: 768px) {
+
+    .confirmation,
+    .empty {
+        padding: var(--space-5);
+    }
+}
+
+.eyebrow {
+    font-size: var(--type-label);
+    color: var(--noir-stone);
+}
+
+.confirmTitle {
+    font-size: var(--type-display-lg);
+}
+
+.confirmBody {
+    color: var(--noir-ecru-dim);
+    font-size: var(--type-body-lg);
+}
+
+.backHome {
+    margin-top: var(--space-2);
+    font-size: var(--type-body-md);
+    border-bottom: 1px solid var(--noir-ecru);
+    padding-bottom: 2px;
+}
