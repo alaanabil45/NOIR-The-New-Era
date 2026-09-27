@@ -39,33 +39,12 @@ Editorial fashion e-commerce experience. Next.js App Router, GSAP + ScrollTrigge
   checkout
 - `/about`, `/shipping`, `/returns` — short editorial-voice info pages
 
-**Placeholder imagery**
-Every image referenced by the site currently exists as a generated,
-on-brand placeholder (near-black background, woven-texture for fabric
-shots, labeled with what it's standing in for) — see "Replacing
-placeholder assets" below. Nothing is a broken image link.
-
 ## Getting started
 
 ```bash
 npm install
 npm run dev
 ```
-
-## Replacing placeholder assets
-
-```
-public/images/
-  editorial/   cover-01.jpg, story-01.jpg, story-02.jpg, collection-intro.jpg
-  fabric/      wool-macro-01.jpg, wool-macro-02.jpg
-  products/    jacket-01/02/03.jpg, trousers-01/02.jpg, shoes-01/02.jpg
-  looks/       look-01.jpg
-```
-
-Drop real photography in using these exact filenames and everything —
-the fabric reveal, the product gallery, the look scene — updates with no
-code changes. To add new products, edit `data/products.ts`; new image
-paths there just need matching files in `public/images/products/`.
 
 ## Not yet done
 
