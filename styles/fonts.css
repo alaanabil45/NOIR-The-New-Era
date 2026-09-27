@@ -1,0 +1,16 @@
+/*
+  Font files are loaded via next/font in app/layout.tsx (self-hosted,
+  zero layout shift, no external font requests at runtime) and exposed
+  as CSS variables: --font-display-loaded, --font-body-loaded.
+
+  This file just aliases the token names in tokens.css to whichever
+  font actually loaded, with the editorial serif / grotesk fallback
+  stack as a safety net if the variables aren't present yet.
+*/
+
+:root {
+  --font-display: var(--font-display-loaded), "Iowan Old Style",
+    "Palatino Linotype", serif;
+  --font-body: var(--font-body-loaded), -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", Arial, sans-serif;
+}

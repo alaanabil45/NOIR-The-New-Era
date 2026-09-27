@@ -1,0 +1,59 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.eyebrow {
+  font-size: var(--type-label);
+  color: var(--noir-stone);
+  margin-bottom: 6px;
+}
+
+.value {
+  font-size: var(--type-body-md);
+}
+
+.sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.sizeButton {
+  min-width: 44px;
+  padding: 10px 14px;
+  border: 1px solid var(--noir-line-on-dark);
+  font-size: var(--type-body-sm);
+  transition: border-color 0.2s var(--ease-editorial), color 0.2s var(--ease-editorial);
+}
+
+.sizeButton:hover {
+  border-color: var(--noir-ecru);
+}
+
+.sizeActive {
+  border-color: var(--noir-ecru);
+  background: var(--noir-ecru);
+  color: var(--noir-black);
+}
+
+.addButton {
+  background: var(--noir-ecru);
+  color: var(--noir-black);
+  padding: var(--space-2);
+  font-size: var(--type-body-md);
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s var(--ease-editorial);
+}
+
+.addButton:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.hint {
+  font-size: var(--type-body-sm);
+  color: var(--noir-stone);
+  margin-top: -8px;
+}

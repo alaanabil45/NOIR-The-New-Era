@@ -1,0 +1,42 @@
+.card {
+  display: block;
+  color: var(--noir-ecru);
+}
+
+.imageWrap {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--noir-charcoal);
+}
+
+.image {
+  object-fit: cover;
+  transition: opacity 0.5s var(--ease-editorial);
+}
+
+.imageHidden {
+  opacity: 0;
+}
+
+.imageWrap .image:not(.imageHidden) {
+  opacity: 1;
+}
+
+.badge {
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+  font-size: var(--type-label);
+  color: var(--noir-black);
+  background: var(--noir-ecru);
+  padding: 2px 8px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--space-1);
+  font-size: var(--type-body-sm);
+  color: var(--noir-ecru-dim);
+}

@@ -1,0 +1,23 @@
+.accordion {
+  border-top: 1px solid var(--noir-line-on-dark);
+}
+
+.item {
+  border-bottom: 1px solid var(--noir-line-on-dark);
+}
+
+.trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2) 0;
+  font-size: var(--type-body-md);
+}
+
+.content {
+  padding-bottom: var(--space-2);
+  color: var(--noir-ecru-dim);
+  font-size: var(--type-body-sm);
+  max-width: 60ch;
+}

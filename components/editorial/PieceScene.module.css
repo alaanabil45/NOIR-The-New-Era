@@ -1,0 +1,77 @@
+.scene {
+  display: grid;
+  grid-template-columns: 1fr;
+  background: var(--noir-black);
+}
+
+@media (min-width: 900px) {
+  .scene {
+    grid-template-columns: 1.4fr 1fr;
+    min-height: 100vh;
+    align-items: center;
+  }
+}
+
+.imageCol {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .imageCol {
+    aspect-ratio: auto;
+    height: 100vh;
+  }
+}
+
+.imageWrap {
+  position: absolute;
+  inset: -6% 0;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.textCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-5) var(--space-3);
+}
+
+@media (min-width: 900px) {
+  .textCol {
+    padding: 0 var(--space-5) 0 var(--space-4);
+  }
+}
+
+.eyebrow {
+  font-size: var(--type-label);
+  letter-spacing: 0.03em;
+  color: var(--noir-stone);
+}
+
+.title {
+  font-size: var(--type-display-lg);
+}
+
+.description {
+  font-size: var(--type-body-lg);
+  color: var(--noir-ecru-dim);
+}
+
+.cta {
+  margin-top: var(--space-2);
+  font-size: var(--type-body-md);
+  border-bottom: 1px solid var(--noir-ecru);
+  padding-bottom: 2px;
+  transition: opacity 0.3s var(--ease-editorial);
+}
+
+.cta:hover,
+.cta:focus-visible {
+  opacity: 0.6;
+}

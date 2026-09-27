@@ -1,0 +1,67 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-header);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-3);
+  mix-blend-mode: difference;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: var(--space-3) var(--space-5);
+  }
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  color: var(--noir-ecru);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.bag,
+.menu {
+  position: relative;
+  font-size: var(--type-label);
+  color: var(--noir-ecru);
+  letter-spacing: 0.01em;
+  padding-block: var(--space-1);
+}
+
+.bag::after,
+.menu::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s var(--ease-editorial);
+}
+
+.bag:hover::after,
+.menu:hover::after,
+.bag:focus-visible::after,
+.menu:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.count {
+  margin-left: 4px;
+  color: var(--noir-stone);
+}

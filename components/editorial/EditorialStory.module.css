@@ -1,0 +1,79 @@
+.scene {
+  position: relative;
+  min-height: 130vh;
+  padding: var(--space-6) var(--space-3);
+  background: var(--noir-black);
+  overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .scene {
+    padding: var(--space-7) 0;
+  }
+}
+
+.imageA {
+  position: relative;
+  width: 62%;
+  aspect-ratio: 3 / 4;
+  margin-left: 0;
+}
+
+@media (min-width: 900px) {
+  .imageA {
+    position: absolute;
+    top: var(--space-5);
+    left: 6%;
+    width: 32vw;
+    height: 44vw;
+    max-height: 640px;
+  }
+}
+
+.imageB {
+  position: relative;
+  width: 78%;
+  aspect-ratio: 4 / 5;
+  margin-left: 22%;
+  margin-top: var(--space-3);
+}
+
+@media (min-width: 900px) {
+  .imageB {
+    position: absolute;
+    top: 30%;
+    right: -4%;
+    width: 26vw;
+    height: 34vw;
+    max-height: 520px;
+    margin: 0;
+  }
+}
+
+.image {
+  object-fit: cover;
+}
+
+.words {
+  position: relative;
+  z-index: 2;
+  margin-top: var(--space-5);
+  font-size: var(--type-display-xl);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.3ch;
+}
+
+@media (min-width: 900px) {
+  .words {
+    margin-top: 0;
+    padding-top: var(--space-6);
+    padding-left: 42vw;
+    max-width: 20ch;
+  }
+}
+
+.word {
+  display: inline-block;
+  will-change: transform, opacity;
+}

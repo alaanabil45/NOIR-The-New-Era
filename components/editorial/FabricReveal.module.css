@@ -1,0 +1,55 @@
+.scene {
+  height: 100vh;
+  overflow: hidden;
+  background: var(--noir-black);
+}
+
+.layer {
+  position: absolute;
+  inset: 0;
+  will-change: transform, opacity;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.copy {
+  position: absolute;
+  left: var(--space-3);
+  bottom: var(--space-4);
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .copy {
+    left: var(--space-5);
+    bottom: var(--space-5);
+  }
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--type-display-sm);
+  color: var(--noir-ecru);
+}
+
+.meta {
+  margin-top: var(--space-1);
+  font-size: var(--type-label);
+  letter-spacing: 0.03em;
+  color: var(--noir-stone);
+}
+
+.staticScene {
+  position: relative;
+  height: 90vh;
+  min-height: 560px;
+  overflow: hidden;
+}
+
+.staticImage {
+  position: absolute;
+  inset: 0;
+}

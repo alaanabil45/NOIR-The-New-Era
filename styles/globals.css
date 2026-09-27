@@ -1,0 +1,100 @@
+@import "./tokens.css";
+@import "./fonts.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto; /* Lenis handles smoothing; native must stay out of the way */
+}
+
+body {
+  margin: 0;
+  background: var(--noir-black);
+  color: var(--noir-ecru);
+  font-family: var(--font-body);
+  font-size: var(--type-body-md);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.02;
+}
+
+p {
+  margin: 0;
+  max-width: 38ch;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* visible keyboard focus, always */
+:focus-visible {
+  outline: 1px solid var(--noir-ecru);
+  outline-offset: 4px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* shared layout primitives */
+.scene {
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  padding-inline: var(--space-3);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-inline: var(--space-5);
+  }
+}
