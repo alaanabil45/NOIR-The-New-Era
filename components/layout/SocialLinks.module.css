@@ -1,0 +1,30 @@
+/*
+  The doubled class (.list.list, .link.link) is intentional: Footer.module.css
+  has `.columns ul` and `.columns a` rules that stack lists vertically and
+  recolor links. Doubling raises specificity so these win regardless of
+  CSS load order.
+*/
+
+.list.list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-1);
+    margin-left: -10px;
+    /* optically align the first icon with the column heading */
+}
+
+.link.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--noir-stone);
+    transition: color 0.3s var(--ease-editorial);
+}
+
+.link.link:hover,
+.link.link:focus-visible {
+    color: var(--noir-ecru);
+}

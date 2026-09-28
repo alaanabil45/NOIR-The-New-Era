@@ -1,8 +1,9 @@
-declare module "@/styles/globals.css";
-
+// Suppress TS error for side-effect CSS import when no type declarations are present
+// @ts-ignore: Cannot find module or type declarations for side-effect import of '../styles/globals.css'
+import "../styles/globals.css";
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
-import "@/styles/globals.css";
+// (globals CSS already imported above)
 import { SiteShell } from "@/components/layout/SiteShell";
 
 // Fraunces: a variable serif with real optical-size/weight range, so
@@ -28,10 +29,12 @@ export const metadata: Metadata = {
   title: "NØIR — The New Era",
   description:
     "Structured. Minimal. Unapologetic. NØIR Issue 001 — The New Era.",
-  icon: {
-    rel: "icon",
-    type: "image/png",
-    url: "/icon.png",
+  icons: {
+    icon: {
+      rel: "icon",
+      type: "image/png",
+      url: "/icon.png",
+    },
   },
 };
 
@@ -42,7 +45,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${displayFont.variable} ${bodyFont.variable}`}>
-      <body>
+      <body suppressHydrationWarning>
         <SiteShell>{children}</SiteShell>
       </body>
     </html>

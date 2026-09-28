@@ -1,0 +1,145 @@
+.main {
+    padding-top: var(--space-6);
+}
+
+.top {
+    padding: 0 var(--space-3);
+}
+
+@media (min-width: 768px) {
+    .top {
+        padding: 0 var(--space-5);
+    }
+}
+
+.back {
+    font-size: var(--type-body-sm);
+    color: var(--noir-stone);
+}
+
+.back:hover,
+.back:focus-visible {
+    color: var(--noir-ecru);
+}
+
+.header {
+    padding: var(--space-3) var(--space-3) var(--space-5);
+}
+
+@media (min-width: 768px) {
+    .header {
+        padding: var(--space-4) var(--space-5) var(--space-6);
+    }
+}
+
+.eyebrow {
+    font-size: var(--type-label);
+    color: var(--noir-stone);
+    margin-bottom: var(--space-1);
+}
+
+.title {
+    font-size: var(--type-display-xl);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    padding: 0 var(--space-3) var(--space-7);
+}
+
+@media (min-width: 900px) {
+    .list {
+        gap: var(--space-7);
+        padding: 0 var(--space-5) var(--space-7);
+    }
+}
+
+.look {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+}
+
+@media (min-width: 900px) {
+    .look {
+        grid-template-columns: 1.15fr 0.85fr;
+        align-items: end;
+        gap: var(--space-5);
+    }
+
+    /* every second look flips sides so the list doesn't read as a template */
+    .lookReverse {
+        grid-template-columns: 0.85fr 1.15fr;
+    }
+
+    .lookReverse .imageLink {
+        order: 2;
+    }
+}
+
+.imageLink {
+    display: block;
+}
+
+.imageWrap {
+    position: relative;
+    aspect-ratio: 2 / 3;
+    background: var(--noir-charcoal);
+    overflow: hidden;
+}
+
+.image {
+    object-fit: cover;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding-bottom: var(--space-2);
+}
+
+.lookName {
+    font-size: var(--type-display-md);
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    border-top: 1px solid var(--noir-line-on-dark);
+    border-bottom: 1px solid var(--noir-line-on-dark);
+    padding-block: var(--space-2);
+}
+
+.items li {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--type-body-md);
+    color: var(--noir-ecru-dim);
+}
+
+.items a:hover,
+.items a:focus-visible {
+    color: var(--noir-ecru);
+}
+
+.total {
+    color: var(--noir-stone);
+    font-size: var(--type-body-sm);
+}
+
+.cta {
+    align-self: flex-start;
+    font-size: var(--type-body-md);
+    border-bottom: 1px solid var(--noir-ecru);
+    padding-bottom: 2px;
+    transition: opacity 0.3s var(--ease-editorial);
+}
+
+.cta:hover,
+.cta:focus-visible {
+    opacity: 0.6;
+}

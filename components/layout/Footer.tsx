@@ -1,4 +1,5 @@
 import styles from "./Footer.module.css";
+import { SocialLinks } from "./SocialLinks";
 
 export function Footer() {
   return (
@@ -27,9 +28,7 @@ export function Footer() {
         </div>
         <div>
           <p className={styles.heading}>Follow</p>
-          <ul>
-            <li><a href="#">Instagram</a></li>
-          </ul>
+          <SocialLinks />
         </div>
       </div>
 

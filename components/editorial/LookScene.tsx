@@ -11,7 +11,7 @@ import styles from "./LookScene.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const look = looks[0];
+const look = looks[1];
 const lookProducts = look.productIds
   .map((id) => products.find((p) => p.id === id))
   .filter(Boolean) as typeof products;
@@ -70,6 +70,9 @@ export function LookScene() {
       </div>
 
       <div ref={panelRef} className={styles.panel}>
+        <a href="/looks" className={styles.viewAll}>
+          View all — {looks.length} looks
+        </a>
         <p className={styles.label}>{look.name}</p>
         <ul className={styles.items}>
           {lookProducts.map((product) => (
